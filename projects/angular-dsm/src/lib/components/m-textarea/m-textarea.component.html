@@ -1,0 +1,4 @@
+<label class="m-label-content" [for]="id">{{label}}</label>
+<textarea class="m-textarea" [rows]="rows" [cols]="cols" [placeholder]="placeholder" #mTextArea [id]="id" [name]="name"
+    [required]="required" [disabled]="disabled" [(ngModel)]="ngModelData" (input)="onChange()" (change)="onChange()"
+    (blur)="onTouchedFn()"></textarea>

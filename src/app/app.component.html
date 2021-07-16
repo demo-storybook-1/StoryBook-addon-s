@@ -1,0 +1,519 @@
+<div>
+  <div class="header">
+    <h1 style="text-align: center; color: #d6135f;">Angular DSM Demo - Sprint 1</h1>
+  </div>
+  <div class="header">
+    <table>
+      <tr>
+        <th>
+          <h4>Primary Action Button</h4>
+        </th>
+        <th>
+          <h4>Primary Action Button Hover</h4>
+        </th>
+        <th>
+          <h4>Primary Action Disabled</h4>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-button (onClick)="onClickEventReceived($event)" label="PRIMARY ACTION" disabled="false" type="primary">
+          </m-button>
+        </td>
+        <td>
+          <m-button (onClick)="onClickEventReceived($event)" label="PRIMARY ACTION" disabled="false" type="primary">
+          </m-button>
+        </td>
+        <td>
+          <m-button (onClick)="onClickEventReceived($event)" label="PRIMARY ACTION" disabled="true" type="primary">
+          </m-button>
+        </td>
+      </tr>
+      <br>
+      <br>
+      <tr>
+
+        <th>
+          <h4>Secondary Action Button</h4>
+        </th>
+        <th>
+          <h4>Secondary Action Hover</h4>
+        </th>
+        <th>
+          <h4>Secondary Action Disabled</h4>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-button (onClick)="onClickEventReceived($event)" label="SECONDARY ACTION" disabled="false" type="secondary">
+          </m-button>
+        </td>
+        <td>
+          <m-button (onClick)="onClickEventReceived($event)" label="SECONDARY ACTION" disabled="false" type="secondary">
+          </m-button>
+        </td>
+        <td>
+          <m-button (onClick)="onClickEventReceived($event)" label="SECONDARY ACTION" disabled="true" type="secondary">
+          </m-button>
+        </td>
+      </tr>
+      <br>
+
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table>
+      <tr>
+
+        <th>
+          <h4>M-Link Component</h4>
+        </th>
+        <th>
+
+        </th>
+        <th>
+
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <m-link url="/test" label="Back to ABC Company Summary"></m-link>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table>
+      <tr>
+        <th>
+          <h4>Slider Default</h4>
+        </th>
+        <th>
+          <h4>Slider Dragged</h4>
+        </th>
+        <th>
+          <h4>Slider Disabled</h4>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-slider (onSlide)="onClickEventReceived($event)" label="Primary Slider" [disabled]="false" type="primary"
+            [min]="0" [max]="100" [step]="0">
+          </m-slider>
+        </td>
+        <td>
+          <m-slider (onSlide)="onClickEventReceived($event)" label="Primary Slider" [disabled]="false" type="primary"
+            [min]="0" [max]="2000" [step]="500">
+          </m-slider>
+        </td>
+        <td>
+          <m-slider (onSlide)="onClickEventReceived($event)" label="Disabled Slider" [disabled]="true" type="primary"
+            [min]="0" [max]="100" [step]="60">
+          </m-slider>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr>
+    <div class="component-section">Radio Button Group</div>
+    <hr>
+
+    <table>
+      <tr>
+        <th>
+          <h4 class="comp-state">Radio Button</h4>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div class="comp-state">Default/ Hover</div>
+        </th>
+        <th>
+          <div class="comp-state">Selected</div>
+        </th>
+        <th>
+          <div class="comp-state">Disabled</div>
+        </th>
+        <th>
+          <div class="comp-state">Disabled Selected</div>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-radiobutton label='Option A' (onClick)="onRadioOptionSelected($event)">
+          </m-radiobutton>
+        </td>
+        <td>
+          <m-radiobutton label='Option B' checked=true (onClick)="onRadioOptionSelected($event)">
+          </m-radiobutton>
+        </td>
+        <td>
+          <m-radiobutton label='Option C' disabled=true (onClick)="onRadioOptionSelected($event)">
+          </m-radiobutton>
+        </td>
+        <td>
+          <form id="demo-btn">
+            <m-radiobutton label='Option D' disabled=true checked=true (onClick)="onRadioOptionSelected($event)">
+            </m-radiobutton>
+          </form>
+        </td>
+      </tr>
+      <tr><br /></tr>
+      <tr>
+        <th>
+          <h4 class="comp-state">Radio Group</h4>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div class="comp-state">Default</div>
+        </th>
+        <th>
+          <div class="comp-state">Selected</div>
+        </th>
+        <th>
+          <div class="comp-state">Disabled</div>
+        </th>
+        <th>
+          <div class="comp-state">Disabled Selected</div>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <form id="demo-radio-group">
+            <m-radiogroup label="Select Countries" [items]="['India','China','Russia']"></m-radiogroup>
+          </form>
+        </td>
+        <td>
+          <form id="demo-radio-group1">
+            <m-radiogroup label="Select Designation" [items]="['Associate Engineer','Senior Engineer']"
+              [selectedIndex]="[1]"></m-radiogroup>
+          </form>
+        </td>
+        <td>
+          <form id="demo-radio-group2">
+            <m-radiogroup label="Select Job"
+              [items]="['Engineer','Doctor','Sailor','Accountant','Managing Director','Vice-President','President']"
+              [disabledIndexes]="[5,6]">
+            </m-radiogroup>
+          </form>
+        </td>
+        <td>
+          <form id="demo-radio-group2">
+            <m-radiogroup label="Select Job"
+              [items]="['Engineer','Doctor','Sailor','Accountant','Managing Director','Vice-President','President']"
+              [disabledIndexes]="[5,6]" [selectedIndex]="[6]">
+            </m-radiogroup>
+          </form>
+        </td>
+      </tr>
+      <!-- <tr>
+        <th>
+          <h4 class="comp-state">Radio Button - Disabled - Unselected</h4>
+        </th>
+        <th>
+          <h4 class="comp-state">Radio Button - Disabled - Selected</h4>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-radiobutton label='Documents missing' (onClick)="onRadioOptionSelected($event)">
+          </m-radiobutton>
+        </td>
+        <td>
+          <m-radiobutton label='Documents found' (onClick)="onRadioOptionSelected($event)">
+          </m-radiobutton>
+        </td>
+      </tr> -->
+      <br>
+      <br>
+    </table>
+
+    <hr>
+    <div class="component-section">(m-chip) Chips Button</div>
+    <hr>
+
+    <table>
+      <tr>
+        <th>
+          <h4 class="comp-state">Basic</h4>
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>
+          <m-chip disabled=true></m-chip>
+          <m-chip label="With Icon" icon="true" disabled=true></m-chip>
+          <m-chip label="Keyword"></m-chip>
+          <m-chip label="With Icon and Action" icon="true"></m-chip>
+        </td>
+      </tr>
+      <tr><br /></tr>
+      <tr>
+        <th>
+          <h4 class="comp-state">Indicators</h4>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-chip label="Success" type="success" disabled=true></m-chip>
+          <m-chip label="Warning" type="warning" disabled=true></m-chip>
+          <m-chip label="Error" type="error" disabled=true></m-chip>
+        </td>
+      </tr>
+      <br>
+      <br>
+    </table>
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table style="width: 100%">
+      <tr>
+        <th style="text-align: left">
+          <h4>TEXTAREA COMPONENT</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-textarea label=" COMMENTS" id="commments" name="comments" placeholder="Your Comments here..."
+            [(ngModel)]="comments">
+          </m-textarea>
+          <p>Comments : {{comments}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <m-textarea label="DESCRIPTION" id="description" name="description" rows="10" cols="40"
+            placeholder="Your decription here...." [(ngModel)]="description"></m-textarea>
+          <p>Description : {{description}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <m-textarea label="REVIEWS" id="review" name="review" rows="5" cols="50"
+            placeholder="This is a disabled textarea..." [disabled]="true"></m-textarea>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table>
+      <tr>
+        <th style="text-align: left">
+          <h4>INPUT TEXTBOX COMPONENT</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-textbox label="First Name" id="firstName" name="firstName" placeholder="First Name..."
+            [(ngModel)]="firstName">
+          </m-textbox>
+          <p>First Name : {{firstName}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <m-textbox label="Disabled Input" id="disabledinputbox" name="disabledinputbox"
+            placeholder="This is a disabled input text box..." [disabled]="true" size="40" type="text">
+          </m-textbox>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table style="width:100%;">
+      <tr>
+        <th style="text-align: left">
+          <h4>PASSWORD TEXTBOX COMPONENT</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-textbox label="Password" id="password" name="password" placeholder="Password..." [(ngModel)]="password"
+            type="password">
+          </m-textbox>
+          <p>Password : {{password}}</p>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table style="width:100%;">
+      <tr>
+        <th style="text-align: left">
+          <h4>EMAIL TEXTBOX COMPONENT</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-textbox label="Email Id" id="emailid" name="emailid" placeholder="Email Id..." [(ngModel)]="emailid"
+            type="email">
+          </m-textbox>
+          <p>Email Id : {{emailid}}</p>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table style="width:100%">
+      <tr>
+        <th style="text-align: left">
+          <h4>SELECT DROPDOWN COMPONENT</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-dropdown label="Select Country" id="selectCountry" name="selectCountry" [(ngModel)]="selectCountry"
+            [items]="countries"></m-dropdown>
+          <p>Selected Value : {{selectCountry}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <m-dropdown label="Select Country" id="selectItem" name="selectItem" [(ngModel)]="selectItem"
+            [items]="countries" [disabled]="true"></m-dropdown>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+          <m-dropdown label="Select Multiple Countries" id="selectMItem" name="selectMItem" [(ngModel)]="selectMItem"
+            [items]="countries" [multiselect]="true" size="5"></m-dropdown>
+          <p>Selected Value : {{selectMItem}}</p>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table>
+      <tr>
+        <th colspan="3" style="text-align: left">
+          <h4>CHECKBOX COMPONENT</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <h5>Checkbox - Default State</h5>
+          <m-checkbox label="Get Alert" id="getAlert" name="getAlert" [(ngModel)]="getAlert" checkboxvalue="my alerts"
+            (change)="onChangeAlertsEventReceived($event)">
+          </m-checkbox>
+          <p>Checked : {{getAlert}}</p>
+          <p>Selected Value : {{selected_alert}}</p>
+        </td>
+        <td>
+          <h5>Checkbox - Disabled Unchecked</h5>
+          <m-checkbox label="Select Alert" id="setAlert" name="setAlert" [disabled]="true">
+          </m-checkbox>
+          <h5><u>To show Checkbox - Disabled checked by default</u></h5>
+          <m-checkbox label="Disabled Checked" id="chkbox1" name="chkbox1" [disabled]="true"
+            [checked]="isCheckedDisabled">
+          </m-checkbox>
+        </td>
+        <td>
+          <p><b><u>To show Checked by Default</u></b></p>
+          <h5>Checkbox - Checked</h5>
+          <m-checkbox label="Apple" id="apple" name="apple" [(ngModel)]="fruit" checkboxvalue="APPLE"
+            (change)="onChangeFruitsEventReceived($event)" [checked]="isFruit" #fruittype>
+          </m-checkbox>
+          <p>Checked : {{fruit}}</p>
+          <p>Selected Value : {{selected_fruit}}</p>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table>
+      <tr>
+        <th style="text-align: left">
+          <h4>INPUT SEARCH COMPONENT</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <m-search label="Search City" id="cityLists" name="cityLists" placeholder="Search City..."
+            [(ngModel)]="cityLists">
+          </m-search>
+        </td>
+      </tr>
+    </table>
+    <p style="padding-left: 50px">City : {{cityLists}}</p>
+    <table>
+      <tr>
+        <td>
+          <m-search label="Disabled Search Input" id="disabledsearchinputbox" name="disabledsearchinputbox"
+            placeholder="This is a disabled search input..." [disabled]="true" size="40">
+          </m-search>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table>
+      <tr>
+        <th style="text-align: left">
+          <h4>TOGGLE SWITCH COMPONENT</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <h3>SWTICH</h3>
+          <m-toggle type="switch" id="onoff" name="onoff" [(ngModel)]="onoff" (change)="onToggle($event)"></m-toggle>
+          <p>Value : {{onoff}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>TOOGLE</h3>
+          <m-toggle type="toggle" name="switchone" [(ngModel)]="switchone" valueone="MALE" valuetwo="FEMALE"
+            (change)="onToggleGender($event)"></m-toggle>
+          <p>Value : {{switchone}}</p>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <hr style="height: 5px; background-color: #d6135f;" />
+    <br />
+    <table>
+      <tr>
+        <th>
+          <h4>REQUIRED FIELD VALIDATION</h4>
+          <hr />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <app-template-form></app-template-form>
+        </td>
+        <td>
+          <app-reactive-form></app-reactive-form>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

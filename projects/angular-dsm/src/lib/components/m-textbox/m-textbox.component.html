@@ -1,0 +1,4 @@
+<label class="m-label-content" [for]="id">{{label}}</label>
+<input class="m-textbox" [placeholder]="placeholder" #mTextBox [id]="id" [name]="name" [required]="required"
+    [size]="size" [disabled]="disabled" [(ngModel)]="ngModelData" (input)="onChange()" (change)="onChange()"
+    (blur)="onTouchedFn()" [pattern]="pattern" [type]="type" />

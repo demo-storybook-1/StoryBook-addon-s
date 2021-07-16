@@ -1,0 +1,12 @@
+<div class="m-chip-content">
+    <div class="m-chip" [className]="'m-chip ' +type">
+        <!-- LEFT ICON -->
+        <img *ngIf="icon" class="icon" alt="https://img.icons8.com/ ok-30px"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABdklEQVRIie2Wu0oDQRSGPw0+goW6BsXGInZpJbWoScC3EBNfwVewDIqFpZ2i+CpKYBEUxHSJdiasxcyy47Jz3UUs8sMp5na+OWfPzA7M9Uda8JhbBzrAPrABRLL/DXgB7oFb4LWqza0BA2AKJBabATdyY6XUBT4dgHmbAO1Q6CkiAl+oGn3fF9otCVXhzpFHhKXXlPZVF/BVhdDULmzQOm7V62tTsuMHwGIO3AFqtt0ZNAKawG6uvyZ9a/VIeFQfQEP6aRaMP5jAw0DoCNiRPraB94I5TyZwSDW7QBPpW6uJZtER4mx/5frV9DZk23SstHrWLNqS4y0F7gO1plpXXEOy49ACYk+otbhODAtV+JInNAGOTeB1zBeICveBfpO7QIp0aXESA2eIanat/IENCuLHr6vuEBsDKy5ggD2qubNnwKErNFWf8g+Bni80VZuwtI+Bg1BoqmXgHFGZLlFe4/BNfZ63EdnzdpPfz9sYcUHcyfZc/0c/xRSI6U98PY0AAAAASUVORK5CYII=" />
+        <!-- CHIP CONTENT -->
+        <span class="m-chip-text">{{label}}</span>
+        <!-- ENABLED ICON (ACTION) -->
+        <img *ngIf="!disabled" class="disabled" alt="https://img.icons8.com/ multiply-48px"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABGElEQVRoge2ZTQ6CMBCFn15HjqNhofdgqUvvrAlueJuGEuj8dGr6JSwIyfR9bYApAJ1Op9MCl5bHfAH4AnhoFdzBDcAHwFta6AVgXg4vCYbnuMUSQ1JoXs5HecYsY2bMobTgdaWg1UqkM8+x7tLCHhJm4YmlhHl4YiHhFp5oSriHJxoS1cITiUT18KREIkx4ckQiXHiyRyJseLIlET48yfUx3v2UiLWVCD/zKTkJk/Bn7YIAToXXQrB2w3q04io0fRNvPSo9N0VF7HnOh5U48pIKJ1Hyhg0jIWkPqkto9DbVJDQbM3cJi67STcKyJTaX8OjnzSQ8NyPqEn/xcXeC/cynpCvxlBac4L+TooQ4PGn6F1On0+nY8QN8QVJkL9gdPQAAAABJRU5ErkJggg==" />
+    </div>
+</div>

@@ -1,0 +1,7 @@
+.header{
+    margin: 50px;
+}
+.header table td, th{
+    padding: 0px 50px;
+    vertical-align: top;
+}

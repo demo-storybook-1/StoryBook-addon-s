@@ -1,0 +1,9 @@
+<div class='m-radiogroup-content'>
+    <p class="m-radiogroup-label">{{label}}</p>
+    <ng-container *ngFor="let item of items;index as i">
+        <m-radiobutton [label]='item' (onClick)="onRadioOptionSelected($event)" [checked]="(selectedIndex == i)"
+            [disabled]="(disabledIndexes.indexOf(i) > -1) ||
+             (selectedIndex > -1 && disabledIndexes.length > 0 )">
+        </m-radiobutton>
+    </ng-container>
+</div>

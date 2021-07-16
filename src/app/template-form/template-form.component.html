@@ -1,0 +1,40 @@
+<h5>Template Form Validation</h5>
+<form name="form" novalidate #form="ngForm" (ngSubmit)="submit(form)">
+    <m-textbox label="Your Name" id="yourname" name="yourname" placeholder="Your Name..." [required]="true" ngModel
+        #yourname="ngModel" size="30">
+    </m-textbox>
+    <div *ngIf="yourname.invalid && (yourname?.dirty || yourname?.touched)" class="error">
+        <div *ngIf="yourname.errors.required">Your Name is Required</div>
+    </div>
+    <br /><br />
+    <m-textbox label="Middle Name" id="middlename" name="middlename" placeholder="Middle Name..." [required]="true"
+        ngModel #middlename="ngModel" size="30" type="alphabets" pattern="^[a-zA-Z]+$">
+    </m-textbox>
+    <div *ngIf="middlename.invalid && (middlename?.dirty || middlename?.touched)" class="error">
+        <div *ngIf="middlename.errors.required">Middle Name is Required</div>
+        <div *ngIf="middlename.errors.pattern">Only alphabets are allowed</div>
+    </div>
+    <br /><br />
+    <m-dropdown label="Select Country" id="country" name="country" [required]="true" ngModel #country="ngModel"
+        [items]="countries"></m-dropdown>
+    <div *ngIf="country.invalid && country.touched" class="error">
+        <div *ngIf="country.errors.required">Country is Required</div>
+    </div>
+    <br /><br />
+    <m-textarea label="MY COMMENTS" id="mycommments" name="mycomments" placeholder="My Comments here..."
+        [required]="true" ngModel #mycomments="ngModel" rows="10" cols="40">
+    </m-textarea>
+    <div *ngIf="mycomments.invalid && mycomments.touched" class="error">
+        <div *ngIf="mycomments.errors.required">Comments is Required</div>
+    </div>
+    <br /><br />
+    <m-checkbox label="Send me newsletter" id="sendNewsLetter" name="sendNewsLetter" checkboxvalue="Send me newsletter"
+        [required]="true" ngModel #sendNewsLetter="ngModel">
+    </m-checkbox>
+    <div *ngIf="sendNewsLetter.invalid && sendNewsLetter.touched" class="error">
+        <div *ngIf="sendNewsLetter.errors.required">Field is Required</div>
+    </div>
+    <br /><br />
+    <p>Form is valid: {{ form.valid ? 'true' : 'false' }}</p>
+    <p>Form Value : {{ form.value | json }}</p>
+</form>

@@ -1,0 +1,7 @@
+<label class="m-label-content" [for]="id">{{label}}</label>
+<div class="searchWrapper">
+    <input class="m-search" [placeholder]="placeholder" #mSearchBox [id]="id" [name]="name" [required]="required"
+        [size]="[size]" [disabled]="disabled" [(ngModel)]="ngModelData" (input)="onChange()" (change)="onChange()"
+        (blur)="onTouchedFn()" type="search" />
+    <div [ngClass]="[disabled ? 'search-icon-disabled' : 'search-icon']"></div>
+</div>

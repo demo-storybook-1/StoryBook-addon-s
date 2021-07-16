@@ -1,0 +1,9 @@
+<label class="m-label-content" [for]="id">{{label}}</label>
+<select class="m-dropdown" [ngClass]="{'multiselect-dropdown': multiselect == true}" #mDropDown [id]="id" [name]="name"
+    [required]="required" [size]="size" [disabled]="disabled" [(ngModel)]="ngModelData" (change)="onChange()"
+    (blur)="onTouchedFn()" [multiple]="multiselect">
+    <option value="" selected>Select</option>
+    <option *ngFor="let item of items">
+        {{item.text}}
+    </option>
+</select>

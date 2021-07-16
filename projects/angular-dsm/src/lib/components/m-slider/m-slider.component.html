@@ -1,0 +1,15 @@
+<div class="m-slider-container" [ngClass]="{ 'm-slider-disabled': disabled }">
+    <div class="m-slider-wrapper">
+        <div class="m-slider-track-wrapper" #mSliderTrack>
+            <div class="m-slider-track-background"></div>
+            <div class="m-slider-track-fill"></div>
+        </div>
+        <div class="m-slider-thumb-container" #mSliderThumb>
+            <div class="m-slider-thumb" [ngClass]="[step === 0 && !disabled ? 'm-slider-thumb-not' : 'm-slider-thumb-selected' ]">
+            </div>
+            <div class="m-slider-label"><span class="m-slider-label-text">{{ step }}</span></div>
+        </div>
+    </div>
+    <input type="range" [min]="min" [max]="max" [value]="step" class="m-slider-input" (input)="onSliderChange($event)"
+        #mSliderInput>
+</div>

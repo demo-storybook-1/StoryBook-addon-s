@@ -1,0 +1,5 @@
+<div>
+    <input class="m-checkbox" type="checkbox" #mCheckBox [id]="id" [name]="name" [disabled]="disabled"
+        [(ngModel)]="ngModelData" [value]="checkboxvalue" (change)="onChange()" (click)="onCheckBoxClick($event)"
+        (blur)="onTouchedFn()" [checked]="checked"><label class="m-label-content" [for]="id">{{label}}</label>
+</div>

@@ -1,0 +1,16 @@
+<div *ngIf="type == 'switch'">
+    <label class="switch">
+        <input type="checkbox" #mToggle [id]="id" [name]="name" [disabled]="disabled" [(ngModel)]="ngModelData">
+        <span class="slider round"></span>
+    </label>
+</div>
+
+
+<div class="toggle-field" *ngIf="type == 'toggle'">
+    <input type="radio" #mToggle id="radio-one" name="name" [disabled]="disabled" [(ngModel)]="ngModelData"
+        [value]="valueone" />
+    <label for="radio-one">{{valueone}}</label>
+    <input type="radio" #mToggle id="radio-two" name="name" [disabled]="disabled" [(ngModel)]="ngModelData"
+        [value]="valuetwo" />
+    <label for="radio-two">{{valuetwo}}</label>
+</div>

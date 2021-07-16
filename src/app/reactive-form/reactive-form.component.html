@@ -1,0 +1,41 @@
+<h5>Reactive Form Validation</h5>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <m-textbox label="Company Name" id="companyName" name="companyName" placeholder="Company Name..."
+        formControlName="companyName" size="30">
+    </m-textbox>
+    <div *ngIf="(submitted && f.companyName.errors) || isValidInput('companyName')" class="error">
+        <div *ngIf="f.companyName.errors.required">Company Name is Required</div>
+    </div>
+    <br /><br />
+    <m-textbox label="My Name" id="myName" name="myName" placeholder="My Name..." formControlName="myName" size="30"
+        type="alphabets">
+    </m-textbox>
+    <div *ngIf="(submitted && f.myName.errors) || isValidInput('myName')" class="error">
+        <div *ngIf="f.myName.errors.required">My Name is Required</div>
+        <div *ngIf="f.myName.errors.pattern">Only alphabets are allowed</div>
+    </div>
+    <br /><br />
+    <m-dropdown label="Select Country" id="countrylists" name="countrylists" formControlName="countrylists"
+        [items]="countries"></m-dropdown>
+    <div *ngIf="(submitted && f.countrylists.errors) || isValidInput('countrylists')" class="error">
+        <div *ngIf="f.countrylists.errors.required">Country is Required</div>
+    </div>
+    <br /><br />
+    <m-textarea label="MY DESCRIPTION" id="mydescription" name="mydescription" placeholder="My description here..."
+        rows="10" cols="40" formControlName="mydescription">
+    </m-textarea>
+    <div *ngIf="(submitted && f.mydescription.errors) || isValidInput('mydescription')" class="error">
+        <div *ngIf="f.mydescription.errors.required">Description is Required</div>
+    </div>
+    <br /><br />
+    <m-checkbox label="Terms and Conditions" id="termsConditions" name="termsConditions"
+        checkboxvalue="Agree Terms and Conditions" formControlName="termsConditions">
+    </m-checkbox>
+    <div *ngIf="(submitted && f.termsConditions.errors) || isValidInput('termsConditions')" class="error">
+        <div *ngIf="f.termsConditions.errors.required">Terms is Required</div>
+    </div>
+    <br /><br />
+    <p>Form is valid: {{ this.userForm.valid ? 'true' : 'false' }}</p>
+    <p>Form Value : {{ userForm.value | json }}</p>
+</form>

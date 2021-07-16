@@ -1,0 +1,58 @@
+.m-label-content {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;   
+  height: 1em;
+  margin: 0 10px;
+  color: #333333;
+  display: inline-table;
+}
+
+.m-checkbox{
+  width: 1em;
+  height: 1em;
+  vertical-align: top;
+  border-radius: 4px;
+  border: solid 1px #ccccd5;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  outline: none;
+  }
+
+ .m-checkbox:checked[type=checkbox] {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" fill="%2322bfac"/></svg>');
+    background-color: #ffffff;    
+    border: solid 1px #b9b9b9;
+  }
+
+  .m-checkbox:focus[type=checkbox],
+  .m-checkbox:checked:focus[type=checkbox]  {
+    outline: none;
+  }
+  
+  .m-checkbox:hover[type=checkbox] {  
+    border: solid 1px #109ccf;
+  }
+
+.m-checkbox:disabled[type=checkbox] ,
+.m-checkbox:disabled:hover[type=checkbox] {
+  border: solid 1px #b9b9b9;
+  background-color: #ffffff;
+}
+
+.m-checkbox:checked:disabled[type=checkbox] ,
+.m-checkbox:checked:disabled:hover[type=checkbox] {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" fill="%23b9b9b9"/></svg>');
+  background-color: #ffffff;
+}

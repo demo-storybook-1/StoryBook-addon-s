@@ -1,0 +1,59 @@
+.m-label-content{
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    display: block;
+    height: 14px;
+    margin-bottom:8px;
+    color: #848484;
+}
+
+.m-textbox{
+  border-radius: 4px;
+  border: solid 1px #ccccd5;
+  background-color: #ffffff;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333333;
+  width: 100%;
+}
+
+.m-textbox:focus{
+  outline: solid 1px #109ccf;
+  -moz-outline-radius: 4px;
+  -webkit-outline-radius: 4px;
+}
+
+.m-textbox:hover{  
+  border: solid 1px #109ccf;
+}
+
+.m-textbox:disabled,
+.m-textbox:disabled:hover{
+  border: solid 1px #d7d7d7;
+  background-color: #ebebeb;
+}
+
+.m-textbox::-webkit-input-placeholder,
+.m-textbox:-ms-input-placeholder,
+.m-textbox::placeholder
+ {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b9b9b9;
+  }

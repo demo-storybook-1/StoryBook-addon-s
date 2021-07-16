@@ -1,0 +1,53 @@
+.m-chip-content {
+  margin: 2px 18px;
+  display: inline-block;
+}
+
+.m-chip {
+  border-radius: 12px;
+  padding: 1px 5px 0;
+  padding: 3px 10px;
+}
+
+.m-chip .m-chip-text {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.m-chip.default {
+  background-color: #f2f4f8;
+  color: #333333;
+  border: solid 1px #dde1e6;
+}
+
+.m-chip.success {
+  background-color: #f7fbef;
+  color: #799f2d;
+}
+
+.m-chip.warning {
+  background-color: #faf8e5;
+  color: #e3ca44;
+}
+
+.m-chip.error {
+  background-color: #fbf2f2;
+  color: #e62828;
+}
+
+img.icon {
+  height: 16px;
+  width: 16px;
+  margin: 0 4px -3px 0;
+}
+
+img.disabled {
+  height: 12px;
+  width: 12px;
+  margin: 0 0 -1px 14px;
+}
